@@ -1,0 +1,30 @@
+
+make clean
+make all
+make load
+
+In Another Terminal:
+
+arm-none-eabi-gdb.exe
+target remote localhost:3333
+
+monitor reset init
+monitor flash write_image erase target/final.elf
+
+monitor reset halt
+monitor resume
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+monitor reset
